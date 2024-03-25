@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+    @apply m-0 p-0 box-border;
+}
+
+html {
+    @apply scroll-smooth;
+}
+
+a, button, input {
+    @apply border-none outline-none bg-transparent no-underline text-inherit;
+}
+
+body {
+    @apply w-full bg-background font-rajdhani overflow-x-hidden relative;
+}
+
+
+/*---- SCROLL BAR ----*/
+::-webkit-scrollbar {
+    @apply w-2.5;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-transparent
+}
+    
+::-webkit-scrollbar-thumb {
+    @apply bg-button rounded-lg bg-clip-content border-transparent border-solid border-2;
+}
+
+
+/*---- CLASS COMMUNE ----*/
+@layer utilities {
+    .content {
+        @apply w-full min-h-[calc(100vh-64px)] mt-16;
+    }
+
+    .page-content {
+        @apply w-full px-4 md:px-28 py-7;
+    }
+}
